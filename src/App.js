@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <div>
         <Layout>
+          {/* Switch Routing statement to declare Route components */}
           <Switch>
             <Route path="/checkout" component={Checkout} />
             <Route path="/orders" component={Orders} />

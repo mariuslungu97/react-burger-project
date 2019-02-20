@@ -12,12 +12,14 @@
     transition: transform 0.3s ease-out;
 }
 
+/* Hide Side Drawer */
 @media (min-width: 500px) {
     .SideDrawer {
         display: none;
     }
 }
 
+/* Side Drawer Hide and Show */
 .Open {
     transform: translateX(0);
 }

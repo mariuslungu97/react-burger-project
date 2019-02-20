@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-import Aux from '../Aux/Aux';
 import classes from './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
 class Layout extends Component {
+    //UI State managed with default Component state (no need for Redux)
     state = {
         showSideDrawer: false
     }
-
+    
     sideDrawerClosedHandler = () => {
         this.setState( { showSideDrawer: false } );
     }
@@ -22,7 +22,7 @@ class Layout extends Component {
 
     render () {
         return (
-            <Aux>
+            <React.Fragment>
                 <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
                 <SideDrawer
                     open={this.state.showSideDrawer}
@@ -30,7 +30,7 @@ class Layout extends Component {
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

@@ -16,6 +16,7 @@
     background-color: white;
 }
 
+/* Hide SideDrawer Toggle */
 @media (min-width: 500px) {
     .DrawerToggle {
         display: none;
